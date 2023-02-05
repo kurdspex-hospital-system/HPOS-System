@@ -1,0 +1,65 @@
+#textarea1 textarea {
+    height: 110px;
+}
+
+#textarea2 textarea {
+    height: 160px;
+}
+
+#form #input input {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 80%;
+}
+
+#form #input select {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 20%;
+}
+
+#clientCheckbox {
+    background-color: #c2c2c2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0 12px;
+}
+
+#clientName {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#type {
+  background-color: #464646;
+}
+
+#type a {
+  color: #cccccc;
+}
+
+#type a:hover {
+  background-color: #5d5d5d !important;
+}
+
+global .dropdown-item.active, global .dropdown-item:active:active {
+  background-color: #5d5d5d !important;
+}
+
+global .rbt-input-hint {
+  color: #cccccc90 !important;
+}
+
+global .rbt-input-main {
+  width: 100%;
+}
+
+.label {
+  font-size: 20px !important;
+}

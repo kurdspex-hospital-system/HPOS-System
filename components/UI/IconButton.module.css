@@ -1,0 +1,129 @@
+.button {
+    min-width: 260px;
+    min-height: 240px;
+    padding: 30px;
+    padding-top: 0;
+    border: 3px #f65f5f solid;
+    border-radius: 23px;
+    transition: all 200ms;
+}
+
+.button img {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 15px;
+    transition: all 300ms;
+}
+
+.button:hover img {
+    transform: scale(1.1);
+}
+
+.button div {
+    font-size: 25px;
+    transition: all 180ms;
+}
+
+.red {
+    background-color: #ff62622a;
+    border-color: #f65f5f;
+}
+
+.red:hover {
+    background-color: #ff626233;
+    box-shadow: 0 0 0 0.2rem #f45e5e4f, 0 0 0 0.5rem #f45e5e29;
+}
+
+.red img {
+    filter: invert(0.5) sepia(1) saturate(8) hue-rotate(320deg);
+}
+
+.red:hover img {
+    filter: invert(0.5) sepia(1) saturate(12) hue-rotate(320deg);
+}
+
+.red div {
+    color: #ee8989;
+}
+
+.red:hover div {
+    color: #ea9b9b;
+}
+
+.blue {
+    background-color: #62d0ff2a;
+    border-color: #5fe2f6;
+}
+
+.blue:hover {
+    background-color: #62d0ff33;
+    box-shadow: 0 0 0 0.2rem #5fe2f64f, 0 0 0 0.5rem #5fe2f629;
+}
+
+.blue img {
+    filter: invert(0.5) sepia(1) saturate(8) hue-rotate(145deg);
+}
+
+.blue:hover img {
+    filter: invert(0.5) sepia(1) saturate(12) hue-rotate(145deg);
+}
+
+.blue div {
+    color: #89cbee;
+}
+
+.blue:hover div {
+    color: #9bd4ea;
+}
+
+.green {
+    background-color: #79ff622a;
+    border-color: #85f65f;
+}
+
+.green:hover {
+    background-color: #79ff6233;
+    box-shadow: 0 0 0 0.2rem #85f65f4f, 0 0 0 0.5rem #85f65f29;
+}
+
+.green img {
+    filter: invert(0.5) sepia(0.4) saturate(8) hue-rotate(50deg);
+}
+
+.green:hover img {
+    filter: invert(0.5) sepia(1) saturate(12) hue-rotate(50deg);
+}
+
+.green div {
+    color: #9aee89;
+}
+
+.green:hover div {
+    color: #b3ea9b;
+}
+
+.gold {
+    background-color: #ffe2622a;
+    border-color: #f6dd5f;
+}
+
+.gold:hover {
+    background-color: #ffe26233;
+    box-shadow: 0 0 0 0.2rem #f6dd5f4f, 0 0 0 0.5rem #f6dd5f29;
+}
+
+.gold img {
+    filter: invert(0.5) sepia(1) saturate(8) hue-rotate(18deg);
+}
+
+.gold:hover img {
+    filter: invert(0.5) sepia(1) saturate(12) hue-rotate(18deg);
+}
+
+.gold div {
+    color: #eee289;
+}
+
+.gold:hover div {
+    color: #eae19b;
+}

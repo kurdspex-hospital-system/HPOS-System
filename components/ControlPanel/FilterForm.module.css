@@ -1,0 +1,14 @@
+#form label {
+    font-size: 23px;
+}
+
+#form select {
+    width: 18%;
+}
+
+#form input {
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 10%;
+}

@@ -1,0 +1,135 @@
+#notification {
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    z-index: 5000;
+    transform: translate(-50%, 0);
+    padding: 11px;
+
+    animation-name: notification;
+    animation-duration: 4500ms;
+}
+
+#notification img {
+    width: 35px;
+}
+
+.done {
+    background-color: #90eb75;
+    color: #022809;
+    border-color: #3e6a46;
+}
+
+.done img {
+    filter: invert(0.8) sepia(1) saturate(6) hue-rotate(110deg);
+}
+
+.error {
+    background-color: #eb7975;
+    color: #280202;
+    border-color: #6a3e3e;
+}
+
+.error img {
+    filter: invert(0.86) sepia(1) saturate(10) hue-rotate(320deg);
+}
+
+.info {
+    background-color: #75e9eb;
+    color: #022528;
+    border-color: #3e6a69;
+}
+
+.info img {
+    filter: invert(0.81) sepia(1) saturate(10) hue-rotate(160deg);
+}
+
+.warning {
+    background-color: #ebe775;
+    color: #282402;
+    border-color: #696a3e;
+}
+
+.warning img {
+    filter: invert(0.8) sepia(1) saturate(10) hue-rotate(26deg);
+}
+
+#notification #close {
+    width: 0;
+    margin-right: 0px;
+    transition: all 300ms;
+}
+
+#notification:hover #close {
+    margin-left: 20px;
+    width: 32px;
+}
+
+#notification #close:hover {
+    transform: scale(1.18);
+}
+
+#notification div {
+    animation-name: text_start;
+    animation-duration: 4500ms;
+}
+
+@keyframes text_start {
+    0% {
+        font-size: 0;
+    }
+
+    15% {
+        font-size: 0;
+    }
+
+    25% {
+        margin-left: 0;
+    }
+
+    30% {
+        font-size: 16px;
+        margin-left: 6px;
+    }
+
+    90% {
+        font-size: 16px;
+        margin-left: 6px;
+    }
+
+    100% {
+        font-size: 0
+    }
+}
+
+@keyframes notification {
+    0% {
+        border-radius: 50px;
+        opacity: 20%;
+    }
+
+    8% {
+        opacity: 100%;
+    }
+
+    20% {
+        border-radius: 50px;
+    }
+
+    35% {
+        border-radius: 10px;
+    }
+
+    90% {
+        opacity: 100%;
+    }
+
+    92% {
+        border-radius: 10px
+    }
+
+    100% {
+        border-radius: 50px;
+        opacity: 0%;
+    }
+}

@@ -1,0 +1,29 @@
+#filter button {
+    border-radius: 18px;
+    width: 110px;
+    transition: all 500ms;
+}
+
+#filter button:hover {
+    background-color: #fec314;
+    border-color: #fbc41c;
+    transform: scale(1.05);
+    box-shadow: 0 0 0 0.3rem rgba(155, 148, 109, 0.25);
+}
+
+#active {
+    background-color: #ffc107;
+    border-color: #fbc41c;
+    transform: scale(1.05);
+    box-shadow: 0 0 0 0;
+}
+
+#form label {
+    font-size: 25px;
+}
+
+#form input {
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+}

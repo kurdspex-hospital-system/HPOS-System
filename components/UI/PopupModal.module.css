@@ -1,0 +1,9 @@
+.body {
+    border-radius: 1.45rem;
+    box-shadow: 0 0 0 0.2rem rgba(31, 170, 212, 0.192);
+    background-color: rgb(43, 43, 43);
+}
+
+.body div {
+    font-size: 30px;
+}

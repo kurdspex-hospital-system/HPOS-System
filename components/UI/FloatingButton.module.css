@@ -1,0 +1,42 @@
+#button {
+    padding: 8px;
+    position: fixed;
+    right: 0.8%;
+    bottom: 2%;
+    z-index: 20;
+    border-radius: 100%;
+    width: 48px;
+    background-color: #11a1df;
+    transition: all 400ms;
+    border: 0;
+}
+
+#button:hover {
+    background-color: #3bc2fc;
+    box-shadow: 0 0 0 0.4rem rgba(155, 109, 154, 0.25);
+}
+
+#button #icon {
+    width: 100%;
+    filter: invert(1);
+    transition: all 400ms;
+}
+
+#button:hover #icon {
+    transform: scale(1.15);
+}
+
+@media screen and (min-width: 576px) {
+    #button {
+        padding: 12px;
+        position: fixed;
+        right: 0.8%;
+        bottom: 2%;
+        z-index: 20;
+        border-radius: 100%;
+        width: 65px;
+        background-color: #11a1df;
+        transition: all 400ms;
+        border: 0;
+    }
+}

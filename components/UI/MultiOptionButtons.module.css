@@ -1,0 +1,19 @@
+#options div {
+    margin-right: 6px;
+    padding: 4px 6px;
+    color: #e4e4e4;
+    background-color: #002438;
+    font-size: 16px;
+    transition: all 100ms;
+    min-width: 90px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 2px solid #005a8a;
+}
+
+#options .active {
+    background-color: #004e79;
+}

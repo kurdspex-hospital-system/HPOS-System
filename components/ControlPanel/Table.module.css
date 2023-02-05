@@ -1,0 +1,34 @@
+#table {
+    background-color: #19191b;
+}
+
+#table #tableHeader {
+    background-color: #d8d8d8;
+    border-radius: 15px;
+    border: 0;
+}
+
+#table #tableHeader h3 {
+    width: 95%;
+}
+
+#table #tableHeader div {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+#table #tableHeader .delete {
+    width: 22%;
+}
+
+#table #tableHeader .type {
+    width: 18%;
+}
+
+#table #tableHeader .info {
+    width: 42%;
+}
+
+#table #tableHeader .date {
+    width: 18%;
+}

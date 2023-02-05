@@ -1,0 +1,19 @@
+#pagination {
+    background-color: rgb(63, 63, 63);
+    border-radius: 15px;
+}
+
+#pagination img {
+    transition: all 250ms;
+    filter: invert(0.3);
+}
+
+#pagination button:hover img {
+    filter: invert(0) sepia(3) saturate(15) hue-rotate(150deg);
+    transform: scale(1.1);
+}
+
+#pagination button:active,
+#pagination button:focus {
+    box-shadow: 0 0 0 0rem rgba(109, 127, 155, 0.25);
+}

@@ -1,0 +1,14 @@
+.title {
+    border-top-left-radius: 1.45rem;
+    border-top-right-radius: 1.45rem;
+}
+
+.body {
+    border-bottom-left-radius: 1.45rem;
+    border-bottom-right-radius: 1.45rem;
+}
+
+.title,
+.body {
+    background-color: rgb(43, 43, 43);
+}

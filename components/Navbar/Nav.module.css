@@ -1,0 +1,26 @@
+.icon {
+    filter: invert(0.4) sepia(3) saturate(0) hue-rotate(150deg);
+    transition: all 300ms;
+}
+
+.selected , 
+.icon:hover {
+    filter: invert(0) sepia(3) saturate(15) hue-rotate(150deg);
+    transform: scale(1.2);
+}
+
+#button:focus {
+    box-shadow: none;
+}
+
+#button img {
+    width: 25px;
+    height: 25px;
+}
+
+@media screen and (min-width: 576px) {
+    #button img {
+        width: 37px;
+        height: 37px;
+    }    
+}

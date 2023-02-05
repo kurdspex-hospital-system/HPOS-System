@@ -1,0 +1,41 @@
+.page {
+  width: 1130px;
+  height: 1599px;
+  background-color: white;
+  background-image: url("/images/HI2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px 2px;
+}
+
+.page .title {
+  font-size: 100px;
+  margin-left: 700px;
+  margin-top: 12px;
+}
+
+.page .row {
+  display: flex;
+  margin-top: 20px;
+}
+
+.page .data {
+  border: 2px solid #001842;
+  border-radius: 6px;
+  padding: 4px 8px;
+  background-color: #f8fafd;
+  overflow: hidden;
+  font-weight: 600;
+  min-width: 30px;
+}
+
+.page .breast .data {
+  border: 2px solid #422900;
+  background-color: #fdfaf8;
+}
+
+.page .other .data {
+  border: 2px solid #004217;
+  background-color: #f8fdf9;
+}

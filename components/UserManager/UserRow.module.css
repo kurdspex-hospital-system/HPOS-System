@@ -1,0 +1,49 @@
+#user {
+    transition: all 500ms;
+    border-radius: 10px;
+    margin-top: 5px;
+    min-height: 37px;
+    background-color: #ffffffa4;
+}
+
+#user:hover {
+    background-color: #ffffffcc;
+}
+
+.record .delete {
+    width: 0;
+    filter: invert(0.9) sepia(100) saturate(0) hue-rotate(360deg);
+    transition: all 500ms;
+}
+
+.record:hover .delete {
+    width: 100%;
+}
+
+.record .delete:hover {
+    filter: invert(0.9) sepia(100) saturate(40) hue-rotate(360deg);
+}
+
+.record button:focus {
+    box-shadow: none;
+}
+
+.name {
+    width: 20%;
+}
+
+.email {
+    width: 30%;
+}
+
+.tel {
+    width: 30%;
+}
+
+.access {
+    width: 15%;
+}
+
+#data {
+    width: 97%;
+}

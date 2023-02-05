@@ -1,0 +1,23 @@
+#form input,
+#form select {
+    background-color: #313131;
+    border: 1px #737373 solid;
+}
+
+#form select {
+    width: 20%;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#form input {
+    width: 80%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#form button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

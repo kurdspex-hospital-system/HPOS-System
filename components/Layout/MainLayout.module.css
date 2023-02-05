@@ -1,0 +1,15 @@
+#page {
+    background-color: #19191b; 
+}
+
+@media screen and (min-width: 576px) {
+    #page {
+        margin-left: 65px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #page {
+        margin-top: 45px;
+    }
+}

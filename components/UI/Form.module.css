@@ -1,0 +1,47 @@
+.form input,
+.form select,
+.form textarea {
+    border-radius: 15px;
+    background-color: #525252;
+    border: 0;
+    color: #dfdfdf;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    background-color: #5c5c5c;
+    border: 0;
+    color: #dfdfdf;
+    box-shadow: 0 0 0 0.2rem rgba(88, 104, 128, 0.25);
+}
+
+.form input:disabled,
+.form select:disabled,
+.form textarea:disabled {
+    background-color: #454545;
+    border: 0;
+}
+
+.form label {
+    font-size: 17px;
+    color: #dfdfdf;
+}
+
+.form textarea {
+    height: 110px;
+}
+
+.form button {
+    border-radius: 16px;
+    transition: all 200ms;
+}
+
+.form button:hover {
+    transform: scale(1.1);
+}
+
+.form .error {
+    background-color: #4b2f2f;
+    border: solid 1px #ce0000;
+}

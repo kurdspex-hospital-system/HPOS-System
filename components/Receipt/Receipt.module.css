@@ -1,0 +1,70 @@
+.img {
+    width: 100%;
+}
+
+#receipt .date {
+    display: flex;
+    position: absolute;
+    top: 216px;
+    right: 225px;
+}
+
+#receipt .name {
+    display: flex;
+    position: absolute;
+    top: 314px;
+    right: 70px;
+}
+
+#receipt .age {
+    display: flex;
+    position: absolute;
+    top: 315px;
+    right: 380px;
+}
+
+#receipt .tel {
+    display: flex;
+    position: absolute;
+    top: 314px;
+    right: 590px;
+}
+
+#receipt .total {
+    display: flex;
+    position: absolute;
+    top: 982px;
+    right: 575px;
+    height: 45px;
+    width: 190px;
+}
+
+#receipt .total span {
+    color: aliceblue;
+    font-size: 18px;
+    text-align: center;
+}
+
+#receipt .data {
+    display: flex;
+    position: absolute;
+    top: 449px;
+    right: 75px;
+}
+
+#receipt .data .record {
+    display: flex;
+    height: 42px;
+    width: 300px;
+}
+
+#receipt .data .price {
+    display: flex;
+    height: 42px;
+    width: 200px;
+}
+
+#receipt .data span {
+    font-size: 14px;
+    text-align: center;
+}

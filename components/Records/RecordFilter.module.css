@@ -1,0 +1,33 @@
+#form label {
+  font-size: 18px;
+}
+
+#form .date {
+  height: 36px;
+  padding-left: 15px;
+}
+
+#type a:hover {
+  background-color: #5d5d5d !important;
+}
+
+global .dropdown-item.active,
+global .dropdown-item:active:active {
+  background-color: #5d5d5d !important;
+}
+
+global .rbt-input-hint {
+  color: #cccccc90 !important;
+}
+
+global .rbt-input-main {
+  width: 100%;
+}
+
+.label {
+  font-size: 20px !important;
+}
+
+.highlight {
+  color: #cd1010;
+}

@@ -1,0 +1,19 @@
+#navbar {
+    position: fixed;
+    height: 100%;
+    width: 65px;
+    z-index: 2000;
+}
+
+.brand {
+    width: 100%;
+    transition: all 400ms;
+}
+
+.brand:hover {
+    transform: scale(1.2);
+}
+.tooltip {
+    font-size: 18px !important;
+    padding: 5px 10px !important;
+}
