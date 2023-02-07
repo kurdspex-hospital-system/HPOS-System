@@ -23,7 +23,7 @@ const RecordRow = ({record, auth, getRecord, onDelete}) => {
       <div id={style.data} className='d-flex m-0 p-1' onClick={getRecordHandler}>
         <h5 className={style.type + " my-auto ps-1 d-none d-sm-inline"}>{record.sub_category}</h5>
         <h5 className={style.name + " my-auto d-none d-sm-inline"}>{record.subscriber_name}</h5>
-        <span className={style.description + " my-auto"}>{record.descriptions.substring(0, 80) + (record.descriptions.length > 80 ? "..." : '')}</span>
+        <span className={style.description + " my-auto"}>{(record.descriptions && record.descriptions.length) && record.descriptions.substring(0, 80) + (record.descriptions.length > 80 ? "..." : '')}</span>
         <h5 className="my-auto ms-auto d-none d-sm-inline">{moment(record.publish_date).format('YYYY-MM-DD')}</h5>
       </div>
       {(auth.isSuperAdmin || auth.id === record.publisher_id) && <div className="ms-auto py-1 pe-1">
