@@ -8,7 +8,7 @@ import style from "./DiseasesPDF.module.css";
 const DiseasesPDF = ({records, patient}, ref) => {
   return (
     <div className="d-none">
-      <div className={style.page} style={{backgroundImage: `url("/images/${records[0].sub_category === 'Breast' ? 'HI3' : records[0].sub_category === 'Other' ? 'HI4' : 'HI2'}.png")`}} ref={ref}>
+      <div className={style.page} style={{backgroundImage: `url("/images/${(records[0] && records[0].sub_category === 'Breast') ? 'HI3' : (records[0] && records[0].sub_category === 'Other') ? 'HI4' : 'HI2'}.png")`}} ref={ref}>
         {(patient && records && records.length && typeof records[0].data5 === 'object' && records[0].data5 !== null) && 
           <div className={`${records[0].sub_category === 'Breast' ? style.breast : records[0].sub_category === 'Other' ? style.other : ''}`}>
             <div className={style.title}>{records[0].sub_category}</div>

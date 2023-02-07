@@ -118,8 +118,8 @@ const SystemBackup = () => {
       {!loading && <>
         <div className='text-light display-4 text-center mb-4'>System Backup</div>
         <div className='mt-5 d-flex'>
-            <IconButton className='mx-auto' src='/icons/backup.svg' text='Create Backup Image' color='blue' onClick={backupClickHandler}/>
-            <IconButton className='mx-auto' src='/icons/cloud_download.svg' text='Retreve Backup Image' color='blue' onClick={() => setModalShow(true)}/>
+            {/* <IconButton className='mx-auto' src='/icons/backup.svg' text='Create Backup Image' color='blue' onClick={backupClickHandler}/>
+            <IconButton className='mx-auto' src='/icons/cloud_download.svg' text='Retreve Backup Image' color='blue' onClick={() => setModalShow(true)}/> */}
             <IconButton className='mx-auto' src='/icons/download-file.svg' text='Download Backup Image' color='gold' onClick={onDownloadFile}/>
             <IconButton className='mx-auto' src='/icons/upload-file.svg' text='Upload Backup Image' color='gold' onClick={() => setUploadModalShow(true)}/>
         </div>

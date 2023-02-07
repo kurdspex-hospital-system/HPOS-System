@@ -85,7 +85,7 @@ export default async function handler(req, res) {
           drug_history: req.body.drug_history
         }
 
-        await database.query("INSERT INTO Patients SET ?", [patientData]);
+        await database.query("INSERT INTO patients SET ?", [patientData]);
       }
 
       res.status(201).json({ type: "done", message: "The Subscribers Successfully Added", data });
@@ -150,7 +150,7 @@ export default async function handler(req, res) {
           drug_history: req.body.drug_history
         }
 
-        await database.query("UPDATE Patients SET ? WHERE subscriber_id = ?", [patientData, req.body.id]);
+        await database.query("UPDATE patients SET ? WHERE subscriber_id = ?", [patientData, req.body.id]);
       }
 
       res.status(202).json({ type: "done", message: "The Subscriber Successfully Updated" });
