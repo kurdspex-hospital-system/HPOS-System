@@ -19,7 +19,7 @@ const DateFilter = ({className, defaultMode, defaultOption, onChange}) => {
       case 'Custom': setOption({min: moment(Date.now()).format('YYYY-MM-DD'), max: moment(Date.now()).format('YYYY-MM-DD')}); break;
       case 'Over Time': 
         setOption("Pending");
-        onChange({min: null, max: null}, 'Pending');
+        onChange({min: null, max: moment(Date.now()).format('YYYY-MM-DD')}, 'Pending');
       break;
     }
   }, [mode])

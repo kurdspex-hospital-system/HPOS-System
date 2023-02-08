@@ -73,7 +73,7 @@ const Surgeries = () => {
       type: tab,
       page: 1,
       plan: "Surgery",
-      state: state ? state : 'All',
+      state: 'Pending',
       planMinDate: date.min,
       planMaxDate: date.max,
     });
