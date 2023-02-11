@@ -25,13 +25,13 @@
 }
 
 .red {
-    background-color: #ff62622a;
-    border-color: #f65f5f;
+    background-color: #eb455e43;
+    border-color: #EB455F;
 }
 
 .red:hover {
-    background-color: #ff626233;
-    box-shadow: 0 0 0 0.2rem #f45e5e4f, 0 0 0 0.5rem #f45e5e29;
+    background-color: #eb455e58;
+    box-shadow: 0 0 0 0.2rem #eb455e40, 0 0 0 0.5rem #eb455e1a;
 }
 
 .red img {
@@ -43,7 +43,7 @@
 }
 
 .red div {
-    color: #ee8989;
+    color: #cf1717;
 }
 
 .red:hover div {
@@ -51,29 +51,29 @@
 }
 
 .blue {
-    background-color: #62d0ff2a;
-    border-color: #5fe2f6;
+    background-color: #0058923a;
+    border-color: #13334C;
 }
 
 .blue:hover {
-    background-color: #62d0ff33;
-    box-shadow: 0 0 0 0.2rem #5fe2f64f, 0 0 0 0.5rem #5fe2f629;
+    background-color: #0058921b;
+    box-shadow: 0 0 0 0.2rem #00589243, 0 0 0 0.5rem #00589227;
 }
 
 .blue img {
-    filter: invert(0.5) sepia(1) saturate(8) hue-rotate(145deg);
+    filter: invert(0.7) sepia(1) saturate(20) hue-rotate(180deg);
 }
 
 .blue:hover img {
-    filter: invert(0.5) sepia(1) saturate(12) hue-rotate(145deg);
+    filter: invert(0.7) sepia(1) saturate(50) hue-rotate(180deg);
 }
 
 .blue div {
-    color: #89cbee;
+    color: #005792;
 }
 
 .blue:hover div {
-    color: #9bd4ea;
+    color: #0274c0;
 }
 
 .green {

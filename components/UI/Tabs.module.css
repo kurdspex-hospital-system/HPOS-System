@@ -1,7 +1,7 @@
 #tabs div {
     padding: 13px 25px;
-    color: #e4e4e4;
-    background-color: #323232;
+    color: #F6F6E9;
+    background-color: #13334C;
     font-size: 21px;
     transition: all 100ms;
     width: 350px;
@@ -10,16 +10,15 @@
 }
 
 #tabs div:hover {
-    background-color: #434343;
+    background-color: #1b496d;
 }
 
 #tabs .active:hover {
-    background-color: #3bc2fc;
+    background-color: #007fd3;
 }
 
 #tabs .active {
-    color: #1e1e1e;
-    background-color: #11a1df;
+    background-color: #0072bd;
 }
 
 #tabs .start {

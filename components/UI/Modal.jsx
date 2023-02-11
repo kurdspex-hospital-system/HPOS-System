@@ -14,7 +14,7 @@ const ModalBox = (props) => {
     >
       {props.title&& <Modal.Header className={style.title}>
         <Modal.Title id="contained-modal-title-vcenter" className='mx-auto'>
-          <span className='display-6 text-light'>{props.title}</span>
+          <span className='display-6'>{props.title}</span>
         </Modal.Title>
       </Modal.Header>}
       <Modal.Body className={style.body}>

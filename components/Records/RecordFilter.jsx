@@ -54,7 +54,7 @@ const RecordFilter = ({accounts, subscribers, tab, onSubmit}) => {
     <>
       <FloatingButton src={'/icons/filter.svg'} bottom="90" onClick={() => setModalShow(true)}/>
       <Modal show={modalShow} onHide={() => setModalShow(false)} size="lg">
-        <div style={{fontSize: '40px'}} className="mb-3 text-light text-center">Filter</div>
+        <div style={{fontSize: '40px'}} className="mb-3 text-center">Filter</div>
         <Form id={style.form} onSubmit={onSubmitData}>
           <label className="mt-2 ms-2">Starting Date</label>
           <input className="form-control" type="date" value={minDate} onChange={(e) => setMinDate(e.target.value)} />
@@ -194,7 +194,7 @@ const RecordFilter = ({accounts, subscribers, tab, onSubmit}) => {
                 <option key={Math.random()} value={account.id}>{account.username}</option>
               ))}
           </select>
-          <button className="btn btn-outline-warning px-4 mt-4 mx-auto d-flex" type="submit">Filter</button>
+          <button className="btn btn-warning px-4 mt-4 mx-auto d-flex" type="submit">Filter</button>
         </Form>
       </Modal>
     </>

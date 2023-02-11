@@ -61,7 +61,7 @@ const RecycleBin = () => {
 
   return (
     <PageLayout>
-      <div className='text-light display-4 text-center mb-4'>Recycle Bin</div>
+      <div className='display-4 text-center mb-4'>Recycle Bin</div>
 
       <Tabs className='mt-2 mb-4' tabs={['Patient', 'Record']} tabNames={['Patients', 'Records']} currentTab={onTabChangeHandler} small/>
       <FilterForm accounts={accounts} tab={tab} onSubmit={onSubmitHandler} />

@@ -3,11 +3,11 @@
     border-radius: 10px;
     margin-top: 5px;
     min-height: 37px;
-    background-color: #929292;
+    background-color: #7bd3ffa4;
 }
 
 #row:hover {
-    background-color: #adadad;
+    background-color: #37bcffa4;
 }
 
 .record .delete {

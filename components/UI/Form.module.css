@@ -2,34 +2,44 @@
 .form select,
 .form textarea {
     border-radius: 15px;
-    background-color: #525252;
+    background-color: #005792;
     border: 0;
-    color: #dfdfdf;
+    color: #F6F6E9;
 }
 
 .form input:focus,
 .form select:focus,
 .form textarea:focus {
-    background-color: #5c5c5c;
+    background-color: #0076c5;
     border: 0;
-    color: #dfdfdf;
-    box-shadow: 0 0 0 0.2rem rgba(88, 104, 128, 0.25);
+    color: #F6F6E9;
+    box-shadow: 0 0 0 0.1rem #13334C;
+}
+
+.form input:focus-visible,
+.form select:focus-visible,
+.form textarea:focus-visible {
+    outline: none;
 }
 
 .form input:disabled,
 .form select:disabled,
 .form textarea:disabled {
-    background-color: #454545;
+    background-color: #13334C;
     border: 0;
 }
 
 .form label {
     font-size: 17px;
-    color: #dfdfdf;
+    color: #13334C;
 }
 
 .form textarea {
     height: 110px;
+}
+
+.form textarea + label {
+    color: #F6F6E9;
 }
 
 .form button {
@@ -42,6 +52,6 @@
 }
 
 .form .error {
-    background-color: #4b2f2f;
-    border: solid 1px #ce0000;
+    background-color: #913800;
+    border: solid 1px #FD5F00;
 }

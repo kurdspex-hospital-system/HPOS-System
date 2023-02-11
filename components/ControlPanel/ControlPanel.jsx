@@ -30,13 +30,13 @@ const ControlPanel = () => {
           <IconButton className='mx-auto' src='/icons/manage_accounts.svg' text='Account Manager' color='blue' onClick={userManegerClickHandler} />
         </div>
         <div className='col-3 d-flex'>
-          <IconButton className='mx-auto' src='/icons/auto_delete.svg' text='Recycle Bin' color='red' onClick={recycleBinClickHandler} />
+          <IconButton className='mx-auto' src='/icons/auto_delete.svg' text='Recycle Bin' color='blue' onClick={recycleBinClickHandler} />
         </div>
         {/* <div className='col-3 d-flex'>
           <IconButton className='mx-auto' src='/icons/update_white.svg' text='Update History' color='green' onClick={updateHistoryClickHandler} />
         </div> */}
         <div className='col-3 d-flex'>
-          <IconButton className='mx-auto' src='/icons/backup.svg' text='System Backup' color='gold' onClick={backupClickHandler} />
+          <IconButton className='mx-auto' src='/icons/backup.svg' text='System Backup' color='blue' onClick={backupClickHandler} />
         </div>
       </div>
     </PageLayout>

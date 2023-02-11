@@ -46,14 +46,14 @@ const UserAccount = () => {
   return (
     <PageLayout>
       <FloatingButton src="/icons/key.svg" bottom="12" onClick={() => setPasswordModelShow(true)}/>
-      <h1 className="text-light text-center mt-2 title display-3">Account Settings</h1>
+      <h1 className="text-center mt-2 title display-3">Account Settings</h1>
       {!loading && <>
         <div className="col-6 col-md-2 mx-auto text-center mt-4">
-          <img className='w-100' src="/icons/account_circle.svg" />
+          <img className='w-100' style={{filter: 'invert(0.7) sepia(1) saturate(20) hue-rotate(180deg)'}} src="/icons/account_circle.svg" />
         </div>
         <div className="col-10 mx-auto mt-2 text-center">
-            <div className="display-6 mt-2 text-light">{user.username}</div>
-            <div className="display-6 mt-2 text-light">{user.phoneNumber}</div>
+            <div className="display-6 mt-2">{user.username}</div>
+            <div className="display-6 mt-2">{user.phoneNumber}</div>
         </div>
       </>}
       {loading && <Loading />}

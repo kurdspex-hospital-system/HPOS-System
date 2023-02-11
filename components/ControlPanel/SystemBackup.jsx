@@ -120,8 +120,8 @@ const SystemBackup = () => {
         <div className='mt-5 d-flex'>
             {/* <IconButton className='mx-auto' src='/icons/backup.svg' text='Create Backup Image' color='blue' onClick={backupClickHandler}/>
             <IconButton className='mx-auto' src='/icons/cloud_download.svg' text='Retreve Backup Image' color='blue' onClick={() => setModalShow(true)}/> */}
-            <IconButton className='mx-auto' src='/icons/download-file.svg' text='Download Backup Image' color='gold' onClick={onDownloadFile}/>
-            <IconButton className='mx-auto' src='/icons/upload-file.svg' text='Upload Backup Image' color='gold' onClick={() => setUploadModalShow(true)}/>
+            <IconButton className='mx-auto' src='/icons/download-file.svg' text='Download Backup Image' color='blue' onClick={onDownloadFile}/>
+            <IconButton className='mx-auto' src='/icons/upload-file.svg' text='Upload Backup Image' color='blue' onClick={() => setUploadModalShow(true)}/>
         </div>
         <PopupModal show={modalShow} onHide={() => setModalShow(false)} size="md">
           <div className="display-6 text-light text-center">Select Backup Date to Restore</div>

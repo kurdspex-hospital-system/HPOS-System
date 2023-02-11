@@ -50,7 +50,7 @@ const Login = () => {
         <input type="text" name="username" value={username} onChange={(e) => setUsername(e.target.value)}/>
         <label className="mt-2">Password</label>
         <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-        <button className="btn btn-light mt-4 mx-auto px-5" type="submit">Login</button>
+        <button className="btn btn-primary mt-4 mx-auto px-5" type="submit">Login</button>
       </Form>
     </PageLayout>
   );

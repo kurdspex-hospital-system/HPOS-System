@@ -1,11 +1,15 @@
 #table {
-    background-color: #19191b;
+    background-color: #19191b00;
 }
 
 #table #tableHeader {
-    background-color: #d8d8d8;
+    background-color: #005792;
     border-radius: 15px;
     border: 0;
+}
+
+#tableHeader h3 {
+    color: #F6F6E9;
 }
 
 #table #tableHeader h3 {

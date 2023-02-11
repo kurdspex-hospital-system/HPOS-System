@@ -6,27 +6,27 @@
 }
 
 #thyroid {
-    background-color: #79e4ffa4;
+    background-color: #579BB1;
 }
 
 #thyroid:hover {
-    background-color: #4ed9fca4;
+    background-color: #2b8fb1;
 }
 
 #breast {
-    background-color: #ffd579a4;
+    background-color: #FFD24C;
 }
 
 #breast:hover {
-    background-color: #fcc54ea4;
+    background-color: #f9c423;
 }
 
 #other {
-    background-color: #b1ff79a4;
+    background-color: #AACB73;
 }
 
 #other:hover {
-    background-color: #9eff58a4;
+    background-color: #92c93b;
 }
 
 .record .delete {

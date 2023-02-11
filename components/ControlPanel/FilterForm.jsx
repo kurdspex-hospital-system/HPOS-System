@@ -51,7 +51,7 @@ const FilterForm = ({tab, accounts, onSubmit}) => {
         ))}
       </select>
 
-      <button className="btn btn-outline-warning ms-3 px-4" type="submit">
+      <button className="btn btn-warning ms-3 px-4" type="submit">
         Search
       </button>
     </Form>

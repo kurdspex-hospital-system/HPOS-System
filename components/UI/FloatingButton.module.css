@@ -6,19 +6,19 @@
     z-index: 20;
     border-radius: 100%;
     width: 48px;
-    background-color: #11a1df;
+    background-color: #005792;
     transition: all 400ms;
     border: 0;
 }
 
 #button:hover {
-    background-color: #3bc2fc;
-    box-shadow: 0 0 0 0.4rem rgba(155, 109, 154, 0.25);
+    background-color: #0079ca;
+    box-shadow: 0 0 0 0.3rem #00589289;
 }
 
 #button #icon {
     width: 100%;
-    filter: invert(1);
+    filter: invert(0.1);
     transition: all 400ms;
 }
 
@@ -35,7 +35,7 @@
         z-index: 20;
         border-radius: 100%;
         width: 65px;
-        background-color: #11a1df;
+        background-color: #005792;
         transition: all 400ms;
         border: 0;
     }
