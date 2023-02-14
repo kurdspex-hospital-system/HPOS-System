@@ -70,7 +70,7 @@ const Records = () => {
 
   return (
     <PageLayout title="Records">
-      <AddData title="Adding Record" bottom="12" apiUrl="/api/record" Form={RecordForm} formProps={{buttonText: 'Add Record', auth, type: tab, category: 'Diseases', patients}} setIsUpdated={setIsUpdated} />
+      <AddData title="Adding Record" bottom="12" apiUrl="/api/record" Form={RecordForm} formProps={{buttonText: 'Add Record', type: tab, category: 'Diseases', patients}} setIsUpdated={setIsUpdated} />
       <RecordFilter accounts={accounts} subscribers={patients} tab={tab} onSubmit={onFilter} />
       <Tabs className='mt-2 mb-4' tabs={['All', 'Thyroid', 'Breast', 'Other']} tabNames={['All Of Diseases', 'Thyroid Diseases', 'Breast Diseases', 'Other Diseases']} currentTab={onTabChangeHandler} small/>
 

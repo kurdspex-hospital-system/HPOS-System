@@ -74,6 +74,7 @@ const OtherDiseaseForm = ({ formData, dispatch, noEdit }) => {
               data-type="text"
               value={moment(formData.plan_date).format('YYYY-MM-DD')}
               onChange={(e) => dispatch({ type: "setPlanDate", data: e.target.value })}
+              disabled={noEdit}
             />
           </>
         )}

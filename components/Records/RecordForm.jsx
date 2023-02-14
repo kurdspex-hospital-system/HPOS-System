@@ -158,16 +158,16 @@ const RecordForm = ({auth, data, state, buttonText, noEdit, onSubmitData, type, 
                         filterBy={(patient, props) => patient.fullname.toLowerCase().includes(props.text.toLowerCase()) || patient.phoneNumber.includes(props.text)}
                         placeholder="Choose a patient ..."
                         selected={formData.subscriber && formData.subscriber.id ? [formData.subscriber] : []}
-                        disabled={noEdit || !patients}
+                        disabled={!access ||noEdit || !patients}
                     />}
 
                     {!patients && <input className="form-control" name="name" type="text" value={formData.subscriber_name} disabled/>}
                 </div>
             </div>
 
-            {formData.category === 'Diseases' && formData.sub_category === 'Thyroid' && <ThyroidDiseaseForm formData={formData} dispatch={dispatch} data={data} state={state} noEdit={noEdit} />}
-            {formData.category === 'Diseases' && formData.sub_category === 'Breast' && <BreastDiseaseForm formData={formData} dispatch={dispatch} data={data} state={state} noEdit={noEdit} />}
-            {formData.category === 'Diseases' && formData.sub_category === 'Other' && <OtherDiseaseForm formData={formData} dispatch={dispatch} data={data} state={state} noEdit={noEdit} />}
+            {formData.category === 'Diseases' && formData.sub_category === 'Thyroid' && <ThyroidDiseaseForm formData={formData} dispatch={dispatch} data={data} state={state} noEdit={!access ||noEdit} />}
+            {formData.category === 'Diseases' && formData.sub_category === 'Breast' && <BreastDiseaseForm formData={formData} dispatch={dispatch} data={data} state={state} noEdit={!access ||noEdit} />}
+            {formData.category === 'Diseases' && formData.sub_category === 'Other' && <OtherDiseaseForm formData={formData} dispatch={dispatch} data={data} state={state} noEdit={!access ||noEdit} />}
 
             <div id={style.textarea1} className="form-floating mt-2">
                 <textarea className="form-control" name="descriptions" placeholder="description text" id="description" maxLength="200" value={formData.descriptions} onChange={(e) => dispatch({type: 'setDescriptions', data: e.target.value})} disabled={!access || noEdit}></textarea>
