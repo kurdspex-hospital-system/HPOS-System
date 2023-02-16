@@ -7,7 +7,7 @@ const restoreBackup = async (json) => {
         await database.query('DELETE FROM records');
         await database.query('DELETE FROM users');
         await database.query('DELETE FROM subscribers');
-        await database.query('DELETE FROM Patients');
+        await database.query('DELETE FROM patients');
         await database.query('DELETE FROM diseases');
 
         for(let record of json.data.records) {

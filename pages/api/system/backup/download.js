@@ -19,7 +19,7 @@ export default async function handler (req, res) {
             const {data: records} = await database.query('SELECT * FROM records');
             const {data: users} = await database.query('SELECT * FROM users');
             const {data: subscribers} = await database.query('SELECT * FROM subscribers');
-            const {data: patients} = await database.query('SELECT * FROM Patients');
+            const {data: patients} = await database.query('SELECT * FROM patients');
             const {data: diseases} = await database.query('SELECT * FROM diseases');
 
             const data = JSON.stringify({data: {records, users, subscribers, patients, diseases}});
