@@ -7,7 +7,7 @@ import Modal from "../UI/Modal";
 import Table from "../UI/Table";
 import UserForm from "./UserForm";
 import UserRow from "./UserRow";
-import PopupModal from "../UI/PopupModal";
+import ConfirmationPopup from "../UI/ConfirmationPopup";
 
 const UserTable = (props) => {
   const [modalShow, setModalShow] = useState(false);
@@ -74,12 +74,7 @@ const UserTable = (props) => {
         <UserForm buttonText="Update User" data={user} onSubmitData={onUpdateHandler} password/>
       </Modal>
 
-      <PopupModal show={deleteModalShow} onHide={() => setDeleteModalShow(false)} size="md">
-        <div className="display-6 text-light text-center">Do you want to Delete this account</div>
-        <div className="d-flex mt-4">
-          <button className="btn btn-danger mx-auto" onClick={() => deleteAccountHandler()}>Yes, Delete it</button>
-        </div>
-      </PopupModal>
+      <ConfirmationPopup text={'Do you want to Delete this account'} btnText={'Yes, Delete it'} show={deleteModalShow} onHide={() => setDeleteModalShow(false)} onClick={deleteAccountHandler} />
     </>
   );
 };

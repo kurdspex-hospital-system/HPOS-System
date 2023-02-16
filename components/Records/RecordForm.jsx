@@ -55,7 +55,7 @@ const RecordForm = ({auth, data, state, buttonText, noEdit, onSubmitData, type, 
 
     useEffect(() => {
         if(auth) {
-            setAccess((auth.isSuperAdmin || auth.id === data.record_user_id));
+            setAccess((auth.isSuperAdmin || auth.id === data.publisher_id));
         }
     }, [auth])
 
