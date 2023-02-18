@@ -36,7 +36,8 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
           thyroxine: '', 
           thiamazele: '',
           inderal: '', 
-          propythioaracil: ''
+          propythioaracil: '',
+          carbimazole: ''
         }
       }});
     }
@@ -164,7 +165,7 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
         <MultiOptionButtons
           className="ms-auto"
           onChange={(option) => setData({drug: option}, "setData4", "data4")}
-          options={["Thyroxine", "Thiamazele", "Inderal", "Propythioaracil"]}
+          options={["Thyroxine", "Thiamazole", "Inderal", "Propylthiouracil", "Carbimazole"]}
           value={formData.data4.drug && formData.data4.drug.find ? formData.data4.drug : []}
           disabled={noEdit}
           multi
@@ -183,8 +184,8 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
         />
       </div>}
 
-      {formData.data4.drug && formData.data4.drug.includes('Thiamazele') && <div className="d-flex mt-2">
-        <label className="ms-3 my-auto w-25">Thiamazele Dose</label>
+      {formData.data4.drug && formData.data4.drug.includes('Thiamazole') && <div className="d-flex mt-2">
+        <label className="ms-3 my-auto w-25">Thiamazole Dose</label>
         <input
           className="form-control w-75 ms-3"
           name="state"
@@ -207,14 +208,26 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
         />
       </div>}
 
-      {formData.data4.drug && formData.data4.drug.includes('Propythioaracil') && <div className="d-flex mt-2">
-        <label className="ms-3 my-auto w-25">Propythioaracil Dose</label>
+      {formData.data4.drug && formData.data4.drug.includes('Propylthiouracil') && <div className="d-flex mt-2">
+        <label className="ms-3 my-auto w-25">Propylthiouracil Dose</label>
         <input
           className="form-control w-75 ms-3"
           name="state"
           type="text"
           value={formData.data4.dose.propythioaracil}
           onChange={(e) => setData({dose: {...formData.data4.dose, propythioaracil: e.target.value}}, "setData4", "data4")}
+          disabled={noEdit}
+        />
+      </div>}
+
+      {formData.data4.drug && formData.data4.drug.includes('Carbimazole') && <div className="d-flex mt-2">
+        <label className="ms-3 my-auto w-25">Carbimazole Dose</label>
+        <input
+          className="form-control w-75 ms-3"
+          name="state"
+          type="text"
+          value={formData.data4.dose.carbimazole}
+          onChange={(e) => setData({dose: {...formData.data4.dose, carbimazole: e.target.value}}, "setData4", "data4")}
           disabled={noEdit}
         />
       </div>}

@@ -77,7 +77,7 @@ const PatientPage = (props) => {
           bottom="85" 
           apiUrl="/api/record" 
           Form={RecordForm} 
-          formProps={{buttonText: 'Add Record', auth, category: 'Diseases', patient}} 
+          formProps={{buttonText: 'Add Record', category: 'Diseases', patient}} 
           setIsUpdated={setIsUpdated} 
         />
         
