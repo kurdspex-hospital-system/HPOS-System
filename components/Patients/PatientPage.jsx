@@ -19,6 +19,7 @@ import Print from "../Print/Print";
 import DiseasesPDF from "../Print/DiseasesPDF";
 
 import style from './PatientPage.module.css';
+import moment from "moment";
 
 const PatientPage = (props) => {
   const [patient, setPatient] = useState();
@@ -63,9 +64,24 @@ const PatientPage = (props) => {
     setModalShow(false);
   }
 
+  const pinPatient = () => {
+    axios.put("/api/subscriber/tag", {subscriber: patient})
+      .then((res) => {
+        setIsUpdated(true);
+        dispatch(notificationActions.activeNotification(res.data));
+      })
+      .catch((err) => {
+        dispatch(notificationActions.activeNotification(err.response.data));
+    });
+  }
+
   return (
     <PageLayout>
       <FloatingButton src="/icons/edit.svg" bottom="9" onClick={() => setModalShow(true)}/>
+
+      {(patient && (patient.last_update ? moment(patient.last_update).isBefore(moment(Date.now(), 'YYYY/MM/DD')) : moment(patient.publish_date).isBefore())) && 
+        <FloatingButton src="/icons/push_pin.svg" bottom={data.length > 1 ? "236" : "161"} onClick={pinPatient}/>
+      }
 
       <Modal show={modalShow} onHide={() => setModalShow(false)} title="Updating Patient Account" size="lg">
         <PatientForm buttonText="Update" data={patient} onSubmitData={onUpdateHandler} state/>
@@ -84,7 +100,7 @@ const PatientPage = (props) => {
         {data.length > 1 && <FloatingButton src="/icons/print.svg" bottom="161" onClick={() => setIsPrint(true)}/>}
         <Print Page={DiseasesPDF} pageProps={{records: data, patient}} isPrint={isPrint} setIsPrint={setIsPrint}/>
         
-        <h1 className="text-center text-light">{patient.fullname}</h1>
+        <h1 className="text-center">{patient.fullname}</h1>
         <div className="row">
           <Panel className={`mt-4 ${style.data} d-flex flex-column`}>
             <div className="d-flex">

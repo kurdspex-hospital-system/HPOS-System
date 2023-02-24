@@ -137,6 +137,10 @@ export default async function handler(req, res) {
         }
 
         await database.query("INSERT INTO diseases SET ?", [diseaseData]);
+        
+        await database.query("UPDATE subscribers SET ? WHERE id = ?", [{
+          last_update: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss")
+        }, reqData.subscriber_id]);
       }
 
       res.status(201).json({ type: "done", message: "The Record Successfully Added", data });
