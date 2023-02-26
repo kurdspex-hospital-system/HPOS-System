@@ -68,12 +68,12 @@ export default async function handler(req, res) {
         publish_date: moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')
       };
 
-      const { data: subscriber } = await database.query(`SELECT * FROM subscribers WHERE data_state != 'Deleted' && data_state != 'Old' && phoneNumber = ${database.escape(req.body.phoneNumber.replace(' ', ''))}`);
+      // const { data: subscriber } = await database.query(`SELECT * FROM subscribers WHERE data_state != 'Deleted' && data_state != 'Old' && phoneNumber = ${database.escape(req.body.phoneNumber.replace(' ', ''))}`);
 
-      if(subscriber.length > 0) {
-        res.status(200).json({ type: "warning", message: "The subscriber already exists" });
-        return;
-      }
+      // if(subscriber.length > 0) {
+      //   res.status(200).json({ type: "warning", message: "The subscriber already exists" });
+      //   return;
+      // }
 
       const { data } = await database.query("INSERT INTO subscribers SET ?", [reqData]);
 
