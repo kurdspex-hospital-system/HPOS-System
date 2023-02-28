@@ -17,6 +17,7 @@ const defaultFormData = {
     sub_category: '',
     descriptions: ' ',
     subscriber: {},
+    subscriber_id: '',
     subscriber_name: '',
     data_state: '',
     publish_date: '',
@@ -49,7 +50,7 @@ const formReducer = (state, action) => {
     }
 }
 
-const RecordForm = ({auth, data, state, buttonText, noEdit, onSubmitData, type, category, patients, patient, onPrint}) => {
+const RecordForm = ({auth, data, state, buttonText, noEdit, onSubmitData, type, category, patients, patient, onPrint, onOpenPatient}) => {
     const [formData, dispatch] = useReducer(formReducer, defaultFormData);
     const [access, setAccess] = useState(true);
 
@@ -82,7 +83,7 @@ const RecordForm = ({auth, data, state, buttonText, noEdit, onSubmitData, type, 
             dispatch({type: 'setSubscriber', data: {id: patient.id, fullname: patient.fullname}})
             dispatch({type: 'setSubscriberName', data: patient.fullname})
         }
-    }, [patient]);;
+    }, [patient]);
 
     const renderPatient = (option, props) => (
         <div className={style.label}>
@@ -187,6 +188,7 @@ const RecordForm = ({auth, data, state, buttonText, noEdit, onSubmitData, type, 
             {access && !noEdit && <div className='d-flex'>
                 <button type="submit" className="btn btn-success mx-auto mt-3 p-2 px-4 submit">{buttonText}</button>
                 {onPrint && <button type="button" className="btn btn-warning mx-auto mt-3 p-2 px-4 submit" onClick={onPrint}>Print</button>}
+                {onOpenPatient && <button type="button" className="btn btn-warning mx-auto mt-3 p-2 px-4 submit" onClick={() => onOpenPatient(formData.subscriber_id)}>Open Patient Page</button>}
             </div>}
         </div>
     </DataForm>

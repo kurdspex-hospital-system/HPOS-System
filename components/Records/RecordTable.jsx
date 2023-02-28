@@ -12,7 +12,7 @@ import ConfirmationPopup from "../UI/ConfirmationPopup";
 import Print from "../Print/Print";
 import DiseasesPDF from "../Print/DiseasesPDF";
 
-const RecordTable = ({records, patient, auth, setLoading, setIsUpdated}) => {
+const RecordTable = ({records, patient, auth, setLoading, setIsUpdated, onOpenPatient}) => {
   const [modalShow, setModalShow] = useState(false);
   const [deleteModalShow, setDeleteModalShow] = useState(false);
   const [record, setRecord] = useState({});
@@ -87,7 +87,7 @@ const RecordTable = ({records, patient, auth, setLoading, setIsUpdated}) => {
       </Table>
 
       <Modal show={modalShow} onHide={onHideModal} title="Record" size="lg">
-        <RecordForm buttonText="Update Record" data={record} onSubmitData={onUpdateHandler} onPrint={patient ? () => setIsPrint(true) : null} auth={auth} state/>
+        <RecordForm buttonText="Update Record" data={record} onSubmitData={onUpdateHandler} onPrint={patient ? () => setIsPrint(true) : null} auth={auth} onOpenPatient={onOpenPatient} state/>
       </Modal>
 
       <Print Page={DiseasesPDF} pageProps={{records: [record], patient}} isPrint={isPrint} setIsPrint={setIsPrint}/>

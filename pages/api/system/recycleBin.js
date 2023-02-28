@@ -68,7 +68,7 @@ export default async function handler (req, res) {
         try{
             if(req.body.tab === 'Patient') {
                 await database.query("DELETE FROM subscribers WHERE (id = ? || other_data = ?) AND (data_state = 'Deleted' || data_state = 'Old')", [req.body.id, req.body.id]);
-                await database.query("DELETE FROM Patients WHERE subscriber_id = ? ", [req.body.id]);
+                await database.query("DELETE FROM patients WHERE subscriber_id = ? ", [req.body.id]);
                 await database.query("DELETE FROM records WHERE subscriber_id = ?", [req.body.id]);
             } else if(req.body.tab === 'Record') {
                 await database.query("DELETE FROM records WHERE (id = ? || other_data = ?) AND (data_state = 'Deleted' || data_state = 'Old')", [req.body.id, req.body.id]);

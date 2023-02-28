@@ -34,9 +34,9 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
         drug: [],
         dose: {
           thyroxine: '', 
-          thiamazele: '',
+          thiamazole: '',
           inderal: '', 
-          propythioaracil: '',
+          propylthiouracil: '',
           carbimazole: ''
         }
       }});
@@ -190,8 +190,8 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
           className="form-control w-75 ms-3"
           name="state"
           type="text"
-          value={formData.data4.dose.thiamazele}
-          onChange={(e) => setData({dose: {...formData.data4.dose, thiamazele: e.target.value}}, "setData4", "data4")}
+          value={formData.data4.dose.thiamazole}
+          onChange={(e) => setData({dose: {...formData.data4.dose, thiamazole: e.target.value}}, "setData4", "data4")}
           disabled={noEdit}
         />
       </div>}
@@ -214,8 +214,8 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
           className="form-control w-75 ms-3"
           name="state"
           type="text"
-          value={formData.data4.dose.propythioaracil}
-          onChange={(e) => setData({dose: {...formData.data4.dose, propythioaracil: e.target.value}}, "setData4", "data4")}
+          value={formData.data4.dose.propylthiouracil}
+          onChange={(e) => setData({dose: {...formData.data4.dose, propylthiouracil: e.target.value}}, "setData4", "data4")}
           disabled={noEdit}
         />
       </div>}

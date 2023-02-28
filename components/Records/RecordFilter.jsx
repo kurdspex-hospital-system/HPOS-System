@@ -76,8 +76,8 @@ const RecordFilter = ({accounts, subscribers, tab, onSubmit}) => {
             selected={subscriber && subscriber.id ? [subscriber] : []}
           />
 
-          <label className="mt-2 ms-2">Receipt Number</label>
-          <input className="form-control" type="number" name='Receipt Number' min={0} value={receipt} onChange={(e) => setReceipt(e.target.value)}/>
+          <label className="mt-2 ms-2">Test ID</label>
+          <input className="form-control" type="number" name='Test ID' min={0} value={receipt} onChange={(e) => setReceipt(e.target.value)}/>
 
           {tab && tab === 'Thyroid' && <>
             <div className="d-flex mt-3 mb-2">

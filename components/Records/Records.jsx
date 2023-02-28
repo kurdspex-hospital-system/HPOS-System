@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useGetRequest } from "../../hooks/useRequest";
 import useAuth from "../../hooks/useAuth";
+import { useRouter } from "next/router";
 
 import PageLayout from "../Layout/PageLayout";
 import AddData from "../DataComponent/AddData";
@@ -25,6 +26,7 @@ const Records = () => {
 
   const getData = useGetRequest();
   const auth = useAuth();
+  const router = useRouter();
 
   useEffect(() => {
     getData('/api/user/accountNames', {}, (data) => {
@@ -68,6 +70,10 @@ const Records = () => {
     setIsUpdated(true);
   }
 
+  const onOpenPatientHandler = (id) => {
+    router.push(`/patients/${id}`);
+  };
+
   return (
     <PageLayout title="Records">
       <AddData title="Adding Record" bottom="12" apiUrl="/api/record" Form={RecordForm} formProps={{buttonText: 'Add Record', type: tab, category: 'Diseases', patients}} setIsUpdated={setIsUpdated} />
@@ -75,7 +81,7 @@ const Records = () => {
       <Tabs className='mt-2 mb-4' tabs={['All', 'Thyroid', 'Breast', 'Other']} tabNames={['All Of Diseases', 'Thyroid Diseases', 'Breast Diseases', 'Other Diseases']} currentTab={onTabChangeHandler} small/>
 
       {!loading && <>
-        <RecordTable records={records} setIsUpdated={setIsUpdated} setLoading={setLoading} auth={auth} accounts={accounts} />
+        <RecordTable records={records} setIsUpdated={setIsUpdated} setLoading={setLoading} auth={auth} accounts={accounts} onOpenPatient={onOpenPatientHandler} />
         <Pagination pageNumber={pageNum} page={page} setPage={pageHandler}/>
       </>}
 

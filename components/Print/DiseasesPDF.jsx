@@ -68,19 +68,19 @@ const DiseasesPDF = ({records, patient}, ref) => {
                 <DataShow title='FNAC:' data={records[0].data3.fnac} dataStyle={style.data}/>
               </div>
 
-              <div className={`${style.row} mt-4`}>
-                <div className={`${style.row} w-50`}>
-                  <div className='ms-5 h6 my-auto'>Drug: </div>
-                  {records[0].data4.drug.map((data) => <div key={data} className={`ms-4 ${style.data}`}>{data}</div>)}
+              <div className={`${style.row}`}>
+                <div className={`${style.row} flex-wrap`}>
+                  <div className='ms-5 h6 my-auto mt-4'>Drug: </div>
+                  {records[0].data4.drug.map((data, i) => <div key={data} className={`ms-4 mt-3 ${style.data}`}>{`${data} | Dose: ${records[0].data4.dose[data.toLowerCase()]}`}</div>)}
                 </div>
               </div>
 
-              <div className={`${style.row} mt-4`}>
+              {/* <div className={`${style.row} mt-4`}>
                 {records[0].data4.drug.includes('Thyroxine') && <DataShow className={`${style.row} w-25 ms-3`} title='Thyroxine Dose:' data={records[0].data4.dose.thyroxine} dataStyle={style.data}/>}
                 {records[0].data4.drug.includes('Thiamazele') && <DataShow className={`${style.row} w-25 ms-3`} title='Thiamazele Dose:' data={records[0].data4.dose.thiamazele} dataStyle={style.data}/>}
                 {records[0].data4.drug.includes('Inderal') && <DataShow className={`${style.row} w-25 ms-3`} title='Inderal Dose:' data={records[0].data4.dose.inderal} dataStyle={style.data}/>}
                 {records[0].data4.drug.includes('Propythioaracil') && <DataShow className={`${style.row} w-25 ms-3`} title='Propythioaracil Dose:' data={records[0].data4.dose.propythioaracil} dataStyle={style.data}/>}
-              </div>
+              </div> */}
 
               <div className={`${style.row} mt-5 ms-5`}>
                 <DataShow className='w-50 mx-1' title='Plan:' data={records[0].data5.type} dataStyle={style.data}/>
