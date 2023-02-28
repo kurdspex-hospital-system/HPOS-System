@@ -14,7 +14,7 @@ const DiseasesPDF = ({records, patient}, ref) => {
             <div className={style.title}>{records[0].sub_category}</div>
 
             <div className={'d-flex w-50 mt-3'} style={{marginLeft: '520px'}}>
-              <DataShow title='Patient ID:' data={patient.id} dataStyle={style.data}/>
+              <DataShow title='Patient ID:' data={patient.patient_id} dataStyle={style.data}/>
               <DataShow title='Test ID::' data={records[0].id} dataStyle={style.data}/>
               <DataShow title='Test Date:' data={moment(records[0].publish_date).format("YYYY-MM-DD HH:mm")} dataStyle={style.data}/>
             </div>
