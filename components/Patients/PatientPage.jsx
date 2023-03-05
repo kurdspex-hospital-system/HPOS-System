@@ -109,6 +109,14 @@ const PatientPage = (props) => {
             data: data.length > 0 ? {
               sub_category: data[0].sub_category,
               data1: data[0].data1,
+              data2: {
+                tsh: '',
+                trab: '',
+                antiTPO: '',
+                freeT4: '',
+                freeT3: '',
+                STG: ''
+              },
               data3: data[0].data3,
               data4: data[0].data4,
             } : undefined

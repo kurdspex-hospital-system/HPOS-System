@@ -50,7 +50,7 @@ const NavbarComponent = (props) => {
 
         <Nav href="/user/account" src="/icons/account.svg" navName='Account' nav={nav}/>
         <Nav href="#" src="/icons/logout.svg" navName='logout' onClick={signOutHandler}/>
-        <div className="col-12 mt-2 text-light">V 1.6</div>    
+        <div className="col-12 mt-2 text-light">V 1.7</div>    
       </Container>
     </Navbar>
   );
