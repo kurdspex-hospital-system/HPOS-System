@@ -32,6 +32,7 @@ const restoreBackup = async (json) => {
         }
 
         for(let disease of json.data.diseases) {
+            disease.plan_date = moment(disease.plan_date).format('YYYY-MM-DD h:mm:ss');
             await database.query('INSERT INTO diseases SET ?', [disease]);
         }
     } catch(err) {

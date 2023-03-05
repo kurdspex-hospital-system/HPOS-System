@@ -20,7 +20,7 @@ const MultiOptionButtons = ({value, onChange, options, className, multi, disable
     return (
       <div id={style.options} className={"d-flex justify-content-center " + className}>
         {options.map((option) =>
-          <div key={option} className={multi ? (value.findIndex((v) => v === option) !== -1 ? style.active : '') : (value === option ? style.active : '')} onClick={onClick}>{option}</div>
+          <div key={option} className={multi ? (value.findIndex && value.findIndex((v) => v === option) !== -1 ? style.active : '') : (value === option ? style.active : '')} onClick={onClick}>{option}</div>
         )}
       </div>
     )

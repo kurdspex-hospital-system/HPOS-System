@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { notificationActions } from "../../store/notification-slice";
+import parseAll from "../../scripts/parseAll";
 
 import PageLayout from "../Layout/PageLayout";
 import Loading from "../UI/Loading";
@@ -47,9 +48,17 @@ const PatientPage = (props) => {
 
   useEffect(() => {
     if(records && records.length) {
-      setData(records.filter((record) => record.sub_category === 'Thyroid'));
+      parseData(records.filter((record) => record.sub_category === 'Thyroid'));
     }
   }, [records])
+
+  const parseData = async (records) => {
+    for(let i = 0; i < records.length; i++) {
+      records[i] = await parseAll(records[i]);
+    }
+
+    setData(records);
+  }
 
   const onUpdateHandler = (patient) => {
     axios.put("/api/subscriber", patient)
@@ -79,7 +88,7 @@ const PatientPage = (props) => {
     <PageLayout>
       <FloatingButton src="/icons/edit.svg" bottom="9" onClick={() => setModalShow(true)}/>
 
-      {(patient && (patient.last_update ? moment(patient.last_update).isBefore(moment(Date.now(), 'YYYY/MM/DD')) : moment(patient.publish_date).isBefore())) && 
+      {(patient && (patient.last_update ? moment(patient.last_update).isBefore(moment(), 'day') : moment(patient.publish_date).isBefore())) && 
         <FloatingButton src="/icons/push_pin.svg" bottom={data.length > 1 ? "236" : "161"} onClick={pinPatient}/>
       }
 
@@ -93,7 +102,17 @@ const PatientPage = (props) => {
           bottom="85" 
           apiUrl="/api/record" 
           Form={RecordForm} 
-          formProps={{buttonText: 'Add Record', category: 'Diseases', patient}} 
+          formProps={{
+            buttonText: 'Add Record', 
+            category: 'Diseases', 
+            patient,
+            data: data.length > 0 ? {
+              sub_category: data[0].sub_category,
+              data1: data[0].data1,
+              data3: data[0].data3,
+              data4: data[0].data4,
+            } : undefined
+          }}
           setIsUpdated={setIsUpdated} 
         />
         

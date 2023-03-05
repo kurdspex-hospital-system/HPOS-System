@@ -45,7 +45,7 @@ const formReducer = (state, action) => {
         case 'setData5': return {...state, data5: action.data};
         case 'setPlanDate': return {...state, plan_date: action.data};
         case 'setDescriptions': return {...state, descriptions: action.data};
-        case 'set': return action.data;
+        case 'set': return {...state, ...action.data};
         case 'default': return defaultFormData;
     }
 }
@@ -64,7 +64,7 @@ const RecordForm = ({auth, data, state, buttonText, noEdit, onSubmitData, type, 
         if(data) {
             dispatch({type: 'set', data})
         }
-    }, []);
+    }, [data]);
 
     useEffect(() => {
         if(type && type !== 'All') {
@@ -84,6 +84,18 @@ const RecordForm = ({auth, data, state, buttonText, noEdit, onSubmitData, type, 
             dispatch({type: 'setSubscriberName', data: patient.fullname})
         }
     }, [patient]);
+
+    useEffect(() => {
+        if(!data) {
+            dispatch({type: 'set', data: {
+                data1: '',
+                data2: '',
+                data3: '',
+                data4: '',
+                data5: ''
+            }})
+        }
+    }, [formData.sub_category, data])
 
     const renderPatient = (option, props) => (
         <div className={style.label}>
