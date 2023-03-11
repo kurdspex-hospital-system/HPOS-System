@@ -45,7 +45,7 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
     if (!formData.data5) {
       dispatch({ type: "setData5", data: {
         type: 'Follow Up',
-        category: 'Nodular',
+        category: [],
         subCategory: [],
         option: 'Lobecdomy',
         size: '',
@@ -264,12 +264,13 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
             className="ms-auto"
             onChange={(option) => setData({category: option}, "setData5", "data5")}
             options={["Nodular", "Hyperthyrodism Uncontrolled"]}
-            value={formData.data5 ? formData.data5.category : ""}
+            value={formData.data5 && formData.data5.category && formData.data5.category.length ? formData.data5.category : []}
             disabled={noEdit}
+            multi
           />
         </div>
 
-        {formData.data5.category &&  formData.data5.category === 'Nodular' && <div className="d-flex mt-2 mb-2">
+        {formData.data5.category && formData.data5.category.includes('Nodular') && <div className="d-flex mt-2 mb-2">
           <label className="ms-3 my-auto">Indication</label>
           <MultiOptionButtons
             className="ms-auto"
@@ -281,7 +282,7 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
           />
         </div>}
 
-        {formData.data5.category &&  formData.data5.category === 'Nodular' && formData.data5.subCategory.includes('Large Nodule') && 
+        {formData.data5.category && formData.data5.category.includes('Nodular') && formData.data5.subCategory.includes('Large Nodule') && 
           <div className="d-flex mt-2">
             <label className="ms-3 my-auto">Size of Large Nodule</label>
             <input
