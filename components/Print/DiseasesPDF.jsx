@@ -151,6 +151,11 @@ const DiseasesPDF = ({records, patient}, ref) => {
                 <div className={`ms-5 ${style.data}`} style={{width: '1015px'}}>{records[0].data5.data}</div>
               </>}
             </>}
+
+            {records[0].descriptions.length > 0 && <>
+              <div className='ms-5 mt-5 mb-1 h6 my-auto'>Notes: </div>
+              <div className={`ms-5 ${style.data}`} style={{width: '1015px'}}>{records[0].descriptions}</div>
+            </>}
           </div>
         }
       </div>

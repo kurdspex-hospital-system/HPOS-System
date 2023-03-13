@@ -183,8 +183,8 @@ const RecordForm = ({auth, data, state, buttonText, noEdit, onSubmitData, type, 
             {formData.category === 'Diseases' && formData.sub_category === 'Other' && <OtherDiseaseForm formData={formData} dispatch={dispatch} data={data} state={state} noEdit={!access ||noEdit} />}
 
             <div id={style.textarea1} className="form-floating mt-2">
-                <textarea className="form-control" name="descriptions" placeholder="description text" id="description" maxLength="200" value={formData.descriptions} onChange={(e) => dispatch({type: 'setDescriptions', data: e.target.value})} disabled={!access || noEdit}></textarea>
-                <label htmlFor="description">Description</label>
+                <textarea className="form-control" name="descriptions" placeholder="description text" id="description" maxLength="500" value={formData.descriptions} onChange={(e) => dispatch({type: 'setDescriptions', data: e.target.value})} disabled={!access || noEdit}></textarea>
+                <label htmlFor="description">Notes</label>
             </div>
 
             {state && formData.data_state !== 'New' && <>
