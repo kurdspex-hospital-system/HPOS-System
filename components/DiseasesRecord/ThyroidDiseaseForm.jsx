@@ -270,7 +270,7 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
             className="ms-auto"
             onChange={(option) => setData({category: option}, "setData5", "data5")}
             options={["Nodular", "Hyperthyrodism Uncontrolled"]}
-            value={formData.data5 && formData.data5.category && formData.data5.category.length ? formData.data5.category : []}
+            value={formData.data5 && formData.data5.category && formData.data5.category.findIndex ? formData.data5.category : []}
             disabled={noEdit}
             multi
           />
