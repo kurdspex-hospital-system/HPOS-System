@@ -68,9 +68,14 @@ const DiseasesPDF = ({records, patient}, ref) => {
                 <DataShow title='FNAC:' data={records[0].data3.fnac} dataStyle={style.data}/>
               </div>
 
+              {records[0].data3.notes.length > 0 && <>
+                <div className='ms-5 mt-2 mb-1 h6 my-auto'>Notes: </div>
+                <div className={`ms-5 ${style.data}`} style={{width: '1015px'}}>{records[0].data3.notes}</div>
+              </>}
+
               <div className={`${style.row}`}>
                 <div className={`${style.row} flex-wrap`}>
-                  <div className='ms-5 h6 my-auto mt-4'>Drug: </div>
+                  <div className='ms-5 h6 my-auto mt-2'>Drug: </div>
                   {records[0].data4.drug.map((data, i) => <div key={data} className={`ms-4 mt-3 ${style.data}`}>{`${data} | Dose: ${records[0].data4.dose[data.toLowerCase()]}`}</div>)}
                 </div>
               </div>
@@ -82,7 +87,7 @@ const DiseasesPDF = ({records, patient}, ref) => {
                 {records[0].data4.drug.includes('Propythioaracil') && <DataShow className={`${style.row} w-25 ms-3`} title='Propythioaracil Dose:' data={records[0].data4.dose.propythioaracil} dataStyle={style.data}/>}
               </div> */}
 
-              <div className={`${style.row} mt-5 ms-5`}>
+              <div className={`${style.row} mt-4 ms-5`}>
                 <DataShow className='w-50 mx-1' title='Plan:' data={records[0].data5.type} dataStyle={style.data}/>
                 <DataShow className='w-50 mx-1' title='Plan Date:' data={moment(records[0].data5.date).format("YYYY-MM-DD HH:mm")} dataStyle={style.data}/>
               </div>

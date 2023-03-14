@@ -22,10 +22,11 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
 
     if (!formData.data3) {
       dispatch({ type: "setData3", data: {
-        type: 'Non Nodule',
+        type: 'Normal',
         data: [],
         size: '',
-        fnac: 'NO'
+        fnac: 'NO',
+        notes: ''
       }});
     }
 
@@ -116,7 +117,7 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
         <MultiOptionButtons
           className="ms-auto"
           onChange={(option) => setData({type: option}, "setData3", "data3")}
-          options={["Non Nodule", "Nodule"]}
+          options={["Normal", "Nodule"]}
           value={formData.data3.type}
           disabled={noEdit}
         />
@@ -157,6 +158,11 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
           value={formData.data3.fnac}
           disabled={noEdit}
         />
+      </div>
+
+      <div className="form-floating mt-2">
+        <textarea className="form-control" style={{height: '100px'}} name="descriptions" placeholder="description text" id="description" maxLength="200" value={formData.data3.notes ? formData.data3.notes: ''} onChange={(e) => setData({notes: e.target.value}, "setData3", "data3")} disabled={noEdit}></textarea>
+        <label htmlFor="description">FNAC Notes</label>
       </div>
 
       <label className="mb-1 mt-4 h4">Treatment</label>
