@@ -112,7 +112,7 @@ const DiseasesPDF = ({records, patient}, ref) => {
               </>}
             </>}
 
-            {records[0].sub_category === 'Breast' && <>
+            {records[0].sub_category === 'Breast' && records[0].data3.type && <>
               <div className={`${style.row} mt-5`}>
                 <div className='ms-5 h6 my-auto'>Chief Complant: </div>
                 {records[0].data1.map((data) => <div key={data} className={`ms-4 ${style.data}`}>{data}</div>)}

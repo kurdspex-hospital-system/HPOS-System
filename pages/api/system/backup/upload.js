@@ -56,13 +56,21 @@ export default async function handler (req, res) {
     if(req.method === 'POST') {    
         try {
             const buff = new Buffer(req.body.data, 'base64');
-            const data = buff.toString('ascii');
+            const data = buff.toString('utf8');
 
             await restoreBackup(await JSON.parse(data));
             res.status(201).json({type: 'done', message: 'The Data Restord Successfully'});
         } catch(err) {
             console.log(err);
             res.status(400).json({type: 'error', message: 'Some thing went wrong'});
+        }
+    }
+}
+
+export const config = {
+    api: {
+        bodyParser: {
+            sizeLimit: '10mb'
         }
     }
 }
