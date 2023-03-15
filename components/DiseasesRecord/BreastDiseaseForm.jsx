@@ -40,7 +40,7 @@ const BreastDiseaseForm = ({formData, dispatch, noEdit}) => {
           className="ms-auto"
           onChange={(option) => dispatch({ type: "setData1", data: option })}
           options={["Pain", "Mass", "Discharge"]}
-          value={formData.data1 && formData.data1.find ? formData.data1 : []}
+          value={formData.data1 && formData.data1.map ? formData.data1 : []}
           disabled={noEdit}
           multi
         />
