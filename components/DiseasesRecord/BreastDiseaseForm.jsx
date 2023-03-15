@@ -68,7 +68,7 @@ const BreastDiseaseForm = ({formData, dispatch, noEdit}) => {
           className="ms-auto"
           onChange={(option) => setData({ type: option }, 'setData3', 'data3')}
           options={["Ultra Sound", "Mammography"]}
-          value={formData.data3 && formData.data3.type ? formData.data3.type : []}
+          value={formData.data3 && formData.data3.type && formData.data3.type.findIndex ? formData.data3.type : []}
           disabled={noEdit}
           multi
         />
@@ -80,7 +80,7 @@ const BreastDiseaseForm = ({formData, dispatch, noEdit}) => {
           className="ms-auto"
           onChange={(option) => setData({ usData: option }, 'setData3', 'data3')}
           options={["Normal", "Mass", "Breast LN", "Collection"]}
-          value={formData.data3 && formData.data3.usData && formData.data3.usData.length > 0 ? formData.data3.usData : []}
+          value={formData.data3 && formData.data3.usData && formData.data3.usData.findIndex ? formData.data3.usData : []}
           disabled={noEdit}
           multi
         />
@@ -92,7 +92,7 @@ const BreastDiseaseForm = ({formData, dispatch, noEdit}) => {
           className="ms-auto"
           onChange={(option) => setData({ mData: option }, 'setData3', 'data3')}
           options={["Normal", "Mass", "Breast LN", "Collection"]}
-          value={formData.data3 && formData.data3.mData && formData.data3.mData.length > 0 ? formData.data3.mData : []}
+          value={formData.data3 && formData.data3.mData && formData.data3.mData.findIndex ? formData.data3.mData : []}
           disabled={noEdit}
           multi
         />
