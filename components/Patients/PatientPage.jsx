@@ -119,6 +119,7 @@ const PatientPage = (props) => {
               },
               data3: data[0].data3,
               data4: data[0].data4,
+              descriptions: data[0].descriptions
             } : undefined
           }}
           setIsUpdated={setIsUpdated} 
