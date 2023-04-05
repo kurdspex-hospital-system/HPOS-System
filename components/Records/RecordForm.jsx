@@ -86,7 +86,7 @@ const RecordForm = ({auth, data, state, buttonText, noEdit, onSubmitData, type, 
     }, [patient]);
 
     useEffect(() => {
-        if(!data) {
+        if(!data || formData.sub_category !== data.sub_category) {
             dispatch({type: 'set', data: {
                 data1: '',
                 data2: '',

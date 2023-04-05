@@ -8,7 +8,7 @@ const BreastDiseaseForm = ({formData, dispatch, noEdit}) => {
     if (formData.data3 === "" || (formData.data3 && !formData.data3.type)) {
       dispatch({
         type: "setData3",
-        data: { type: [], usData: [], mData: []},
+        data: { type: [], usData: [], mData: [], notes: ""},
       });
     }
   }, [formData.data3]);
@@ -96,6 +96,21 @@ const BreastDiseaseForm = ({formData, dispatch, noEdit}) => {
           disabled={noEdit}
           multi
         />
+      </div>}
+
+      {(formData.data3 && (formData.data3.type.includes('Mammography') || formData.data3.type.includes('Ultra Sound'))) && <div className="form-floating">
+        <textarea
+          className="form-control"
+          name="data2"
+          placeholder="Indication Text"
+          id="description"
+          maxLength="1000"
+          style={{ height: "100px" }}
+          value={formData.data3 && formData.data3.notes ? formData.data3.notes : ''}
+          onChange={(e) => setData({ notes: e.target.value }, 'setData3', 'data3')}
+          disabled={noEdit}
+        ></textarea>
+        <label htmlFor="description">Ultra Sound And Mammography Notes</label>
       </div>}
 
       <div className="d-flex mt-3 mb-2">

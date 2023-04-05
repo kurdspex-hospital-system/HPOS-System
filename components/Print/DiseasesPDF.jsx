@@ -115,7 +115,7 @@ const DiseasesPDF = ({records, patient}, ref) => {
             {records[0].sub_category === 'Breast' && records[0].data3.type && <>
               <div className={`${style.row} mt-5`}>
                 <div className='ms-5 h6 my-auto'>Chief Complant: </div>
-                {records[0].data1.map((data) => <div key={data} className={`ms-4 ${style.data}`}>{data}</div>)}
+                {records[0].data1.map && records[0].data1.map((data) => <div key={data} className={`ms-4 ${style.data}`}>{data}</div>)}
               </div>
 
               <div className='ms-5 mt-5 mb-1 h6 my-auto'>Examination And History: </div>
@@ -135,6 +135,11 @@ const DiseasesPDF = ({records, patient}, ref) => {
                 <div className='ms-5 h6 my-auto'>Mammography Options: </div>
                 {records[0].data3.mData.map((data) => <div key={data} className={`ms-4 ${style.data}`}>{data}</div>)}
               </div>}
+
+              {(records[0].data3.notes && records[0].data3.notes.length > 0) && <>
+                <div className='ms-5 mt-4 mb-1 h6 my-auto'>Ultra Sound And Mammography Notes: </div>
+                <div className={`ms-5 ${style.data}`} style={{width: '1015px'}}>{records[0].data3.notes}</div>
+              </>}
             </>}
 
             {records[0].sub_category === 'Other' && <>
