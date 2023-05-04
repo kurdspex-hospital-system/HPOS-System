@@ -22,7 +22,7 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
 
     if (!formData.data3) {
       dispatch({ type: "setData3", data: {
-        type: 'Normal',
+        type: 'No Test',
         data: [],
         size: '',
         fnac: 'NO',
@@ -117,7 +117,7 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
         <MultiOptionButtons
           className="ms-auto"
           onChange={(option) => setData({type: option}, "setData3", "data3")}
-          options={["Normal", "Nodule"]}
+          options={["No Test", "Normal", "Nodule"]}
           value={formData.data3.type}
           disabled={noEdit}
         />
@@ -149,7 +149,7 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
         </div>
       </>}
 
-      <div className="d-flex mt-2">
+      {formData.data3.type !== "No Test" && <div className="d-flex mt-2">
         <label className="ms-3 my-auto">FNAC</label>
         <MultiOptionButtons
           className="ms-auto"
@@ -158,7 +158,7 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
           value={formData.data3.fnac}
           disabled={noEdit}
         />
-      </div>
+      </div>}
 
       <div className="form-floating mt-2">
         <textarea className="form-control" style={{height: '100px'}} name="descriptions" placeholder="description text" id="description" maxLength="200" value={formData.data3.notes ? formData.data3.notes: ''} onChange={(e) => setData({notes: e.target.value}, "setData3", "data3")} disabled={noEdit}></textarea>

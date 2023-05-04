@@ -65,7 +65,7 @@ const DiseasesPDF = ({records, patient}, ref) => {
                   </>}
                   <DataShow title='Size of Large Nodule:' data={records[0].data3.size} dataStyle={style.data}/>
                 </>}
-                <DataShow title='FNAC:' data={records[0].data3.fnac} dataStyle={style.data}/>
+                {records[0].data3.type !== 'No Test' && <DataShow title='FNAC:' data={records[0].data3.fnac} dataStyle={style.data}/>}
               </div>
 
               {records[0].data3.notes && records[0].data3.notes.length > 0 && <>
