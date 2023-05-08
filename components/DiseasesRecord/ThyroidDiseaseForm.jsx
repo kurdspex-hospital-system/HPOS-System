@@ -22,7 +22,7 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
 
     if (!formData.data3) {
       dispatch({ type: "setData3", data: {
-        type: 'No Test',
+        type: 'No US',
         data: [],
         size: '',
         fnac: 'NO',
@@ -117,7 +117,7 @@ const ThyroidDiseaseForm = ({ formData, dispatch, noEdit }) => {
         <MultiOptionButtons
           className="ms-auto"
           onChange={(option) => setData({type: option}, "setData3", "data3")}
-          options={["No Test", "Normal", "Nodule"]}
+          options={["No US", "Normal", "Nodule"]}
           value={formData.data3.type}
           disabled={noEdit}
         />
